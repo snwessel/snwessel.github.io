@@ -1,176 +1,1370 @@
 <!DOCTYPE html>
-<!--
-	Interphase by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Boston Running</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-xlarge.css" />
-		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-	</head>
-	<body class="landing">
-
-		<!-- Header -->
-			<header id="header">
-
-			</header>
-
-		<!-- Banner -->
-			<section id="banner">
-				<h2>This is Boston Running</h2>
-				<p>Discovering Where and Why Bostonians Run</p>
-
-
-			</section>
-
-		<!-- One -->
-			<section id="one" class="wrapper style1 align-center">
-				<div class="container">
-					<header>
-						<h2>What is the Boston Running Project?</h2>
-						<p>Long ago, on a continent not so far away, there were once tribes of humans that would run. Run across the plains of Africa.
-						Run so far and so fast as to outrun their prey. Over the tens of millennia since those days mankind has continued to run.
-						Not just for survival but also for sport and for personal improvement.
-						These days, we in the city of Boston, eek out time from our busy lives to run.
-						The difficult part is where to run. Do we run on the sidewalks, along the river, or through trails in the parks?
-						Questions dealing with where, when, and why rack our minds when deciding on a new route. We set out to show how Boston runners choose where to run.
-							By analyzing thousands of running routes and comparing their densities
-							to the density of trees and pedestrians throughout the city, we hoped to find
-							a correlation which would indicate that runners choose their routes based on their surroundings. </p>
-					</header>
-					<div class="row 200%">
-						<section class="4u 12u$(small)">
-							<i class="icon big rounded fa-globe"></i>
-							<p>Where do people run most often in Boston?</p>
-						</section>
-						<section class="4u 12u$(small)">
-							<i class="icon big rounded fa-users"></i>
-							<p>Do people avoid crowded areas or congregate to them?</p>
-						</section>
-						<section class="4u$ 12u$(small)">
-							<i class="icon big rounded fa-tree"></i>
-							<p>Do people run more often in areas with more greenery?</p>
-						</section>
-					</div>
-				</div>
-			</section>
-
-		<!-- Two -->
-			<section id="two" class="wrapper style2 align-center">
-				<div class="container">
-					<header>
-						<h2>We Aimed to Show Why People Run Where They Run</h2>
-						<p>By Looking at What Surrounds Them Where They Run Most</p>
-					</header>
-					<div class="row">
-						<section class="feature 6u 12u$(xlarge)" style="width: 100%">
-							<img class="image fit" src="boston.png" alt="" />
-							<h3 class="title">Running Routes</h3>
-							<p>Here is a basic heatmap of the running routes in boston. This heatmap was generated using R which in turn used data collected using Python from the MapMyRun API. The current iteration of this heatmap uses 1600 different routes to show the areas that people run in. As you can see there is quite a few routes that go through the center of the city. It seems to radiate out from the center of the city along major streets. A possible reason for the routes to be centered on the center of the city is because when we pulled data from the MapMyRun API we used a point fairly close to the Boston Commons. This could very well account for this effect as only the closest of the routes might have actually been pulled from the API.	</p>
-						</section>
-					</div>
-					<div class="row">
-						<section class="feature 6u 12u$(small)">
-							<img class="image fit" src="boston-pedestrians.png" alt="" />
-							<h3 class="title">Pedestrians and Bikes</h3>
-							<p>The map above is a heat map of pedestrian/bike density in Boston. We used a pedestrian/bike count database, which is a collection of pedestrian sighting that we found on the Boston Region MPO Website, to generate this heat map using R. The darker each area on the map is, the higher the density of pedestrians and bikers is in that area. You can clearly see that the areas near the edge of the Charles river and Boston commons have the highest concentration of pedestrian and bikers. Respectfully, the density decreases as you go towards the North End, and further North. You can also see that Backbay is also an area of high concentrations, equally areas around Fenway had high densities. However, south Boston has the lowest concentration in Boston. </p>
-						</section>
-						<section class="feature 6u$ 12u$(small)">
-							<img class="image fit" src="images/tree-heatmap.png" alt="" />
-							<h3 class="title"> Parks and Greenery</h3>
-							<p>Above is a basic heatmap of trees in Boston which we are using represent greenspace
-								throughout the city. To make this map we used a set of data, collected by the city
-								which describes the location of every tree within city limits. Each point on the map is set at a low opacity 
-								so that overlapping points create dark zones, indicating more densely vegetated areas. From the heatmap, we 
-								can clearly see that areas like the South End, Backbay and Beacon Hill are particularly tree lined while a few 
-								neighborhoods like the financial district and the area just South East of the highway are almost completely treeless.
-							</p>
-						</section>
-						</div>
-
-						<div class="row">
-						<section class="feature 6u 12u$(small)">
-							<img class="image fit" src="boston-running-pedestrians.png" alt="" />
-							<h3 class="title">Running Around Pedestrians</h3>
-							<p>This overlay is a little more complicated than the parks overlay to the right. While there is a high volume of pedestrians and bicycles going throughout the city there is quite a high volume around Back Bay and the West End up into Cambridge. However there are quite a few running routes that go through this area as well. This would seem to suggest that where people run is not impacted by where pedestrians walk and cyclists cycle. Though runners do run where bikes largely cannot (see Eastern and downtown Boston), they also run where they can and do. One thing to take notice of is the intersection of runners and cyclists on and especially at the Boston ends of the Charles and Longfellow bridges. If the City were to look into the dynamics of runners relative to other pedestrians, these would be the most pertinent areas of focus.</p>
-						</section>
-						<section class="feature 6u$ 12u$(small)">
-							<img class="image fit" src="boston-running-trees.png" alt="" />
-							<h3 class="title"> Running in Parks</h3>
-							<p>This heatmap overlays the major running routes with the parks and vegetation in Boston. The number of runners in an area controls the opacity of the cell, and the number of trees control the color. Unfortunately, we did not take into account trees in Cambridge, which explains the entirely gray cells there. Observing the graph, it would appear that runners generally do not travel where there isn't at least some scenery. Besides some gray in southern downtown where there are major highways (something the City of Boston might want to look into for immproving scenery), and the gray line around the breakwater of Pleasure Bay, running routes largely coincide with scenic areas. Some particularly scenic and well run areas are the coastline between the two bridges, as well as the larger swath spanning from BU to downtown. </p>
-						</section>
-						</div>
-						<div class="align-center">
-
-						<section class="feature 6u 12u$(xlarge)" style="width:100%">
-							<h3>What Running Maps Have to Teach Us</h3>
-							<p>So what does all of this tell us? Well it is quite diffucult to draw any conclusive observations about any trends or patterns, however the heat maps to suggest a few things. Firstly that people do seem to run in the areas of the city where there are more trees.  Runners also seem to avoid the same areas as where there are few trees. Areas like the South End have very few trees and almost no routes that go through them. Now this does not mean that because there are few trees runners avoid those areas. In fact to say that would be falling into the age old trap of correlation not implying causation. Just because people do not run in the place does not mean there will be few trees in that area and the same can be said about the reverse. That being said the majority of the routes that were obtained followed very green areas that also had a high volume of foot traffic.
-							<br> The pedestrian and bike data overlayed with the running data is somewhat diffucult to interpret. However if you look at what areas of the map are colored closer to the red end of the scale you can see that those same places are also main running routes. This could imply some overlap, but also could imply that the places that people walk are nice enough that people also run there (or vice versa). Whichever is the case this heat map seems generally reflective of the running routes heatmap which suggests a lot of overlap between the two groups. This could suggest that runners do not care too much if they are running in places with a large volume of foot traffit or bicyclists.
-							</p>
-
-							<h3>What Lies Ahead</h3>
-							<p>Going forward, there is much work to be done to better understand how Boston Runners decide where to run. If we had unlimited time and 
-								resources, we would like to collect more data on pedestrian density so that we can make a more accurate map. We would also like to ask
-								other questions of our running data. What time do people like to run? Do they tend to avoid streets with more cars? Do they run less
-								frequently on days with bad weather? By answering some of these questions, we might get a more complete picture of how Bostonians run. 
-							</p>
-
-							<h3>So...? Do runners care about what is around them?</h3>
-							<p> From the data we have collected it seems as though they do somewhat. When it comes to how asthetically pleasing a route is it seems as though there is quite a bit of overlap. However, there is also a very large amount of overlap for the pedestrian and bike data with the routes. This would suggest that runners do not take into account who they need to run around (or who they need to let ride by them) when they choose where to run. It might be the case that Boston is a overall just a nice city for runners, with an abundance of scenic and spacious areas such that runners need not micromanage their path for these things. Should the City be looking for logistical insight, we suggest taking a look at all the traffic crossing the bridge, and exiting it, as that is where there is both high and diverse traffic. To runners, we say, just go where your heart pleases: whether it be along the Charles river or a tour through downtown, you'll never be too far away from something pretty, though you may want to avoid the barren southern areas if green is what you need, or the bridges if you don't like sharing the sidewalk.
-							</p>
-						</section>
-						</div>
-
-				</div>
-			</section>
-
-			<section class="align-center">
-				<div>
-					<p>By the way, find all the code we used, and a few of the datasheets <a href="https://github.com/A-lxe/boston-running/tree/code">here</a></p>
-				</div>
-			</section>
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="container">
-					<div class="align-center">
-						<section class="4u$ 12u$(xlarge) 12u$(small) footer-text" style="width:100%">
-							<h3>Credits</h3>
-							<h1>Sarah Wessel</h1>
-							<p>wessel.s@husky.neu.edu</p>
-							<p>Created heatmap of green-space data, cleaned pedestrian data, website design</p>
-
-							<h1>Will Epstein</h1>
-							<p>epstein.w@husky.neu.edu</p>
-							<p>Lead web designer</p>
-
-							<h1>Alex Aubuchon</h1>
-							<p>aubuchon.al@husky.neu.edu</p>
-							<p>Contacted mapmyrun API to retrieve running route data,
-								created R script to visualize running data, created pedestrian density heatmap,
-								overlayed maps</p>
-
-							<h1>Yasmine Ghannam</h1>
-							<p>ghannam.y@husky.neu.edu</p>
-							<p>Worked with pedestrian density data</p>
-						</section>
-					</div>
-				</div>
-			</footer>
-
-	</body>
+   <head>
+     
+      <!--mobile specific metas-->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--end mobile specific metas-->
+      
+      <!--title-->
+      <title>Ariox Portfolio Theme</title>
+      
+      <!--css-->
+      
+      <!--bootstrap-->
+      <link href="css/bootstrap.css" rel="stylesheet">
+      
+      <!--icons-->
+      <link href="css/ionicons.css" rel="stylesheet">
+      <!--owl carousel-->
+      
+      <link href="css/owl.carousel.css" rel="stylesheet">
+      
+      <!--magnific-popup-->
+      <link href="css/magnific-popup.css" rel="stylesheet">
+      
+      <!--theme styles-->
+      <link href="css/style.css" rel="stylesheet">
+      
+      <!--animation-->
+      <link href="css/animation.css" rel="stylesheet">
+      
+      <!--end css-->
+      
+      <!--modernizr-->
+      <script src="js/modernizr-custom.js"></script>
+      
+   </head>
+   
+   <!--body start-->
+   <body>
+     
+      <!--wrapper-->
+      <div class="wrapper">
+        
+         <!--page-loader-->
+         <div class="page-loader">
+            <div class="preloader">
+              
+               <!--preloader svg-->
+               <svg class="pl-circular" viewBox="25 25 50 50">
+                  <circle class="plc-path" cx="50" cy="50" r="20"/>
+               </svg>
+               <!--end preloader svg-->
+               
+            </div>
+         </div>
+         <!--end page-loader-->
+         
+         <!--header-->
+         <header class="header">
+           
+            <!--navbar-->
+            <nav class="navbar navbar-default navbar-fixed-top">
+               <div class="container">
+                  <div class="row">
+                    
+                     <!--navbar-header-->
+                     <div class="navbar-header page-scroll">
+                      
+                       <!--toggle-btn-->
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!--end toggle-btn-->
+                        
+                        <!--navbar-brand-->
+                        <div class="navbar-brand pull-left">
+                           <a href="#home" class="easing">
+                              <h3 class="brand">Ario<span>X</span></h3>
+                           </a>
+                        </div>
+                        <!--end navbar-brand-->
+                        
+                     </div>
+                     <!--end navbar-header-->
+                     
+                     <!--navbar-collapse-->
+                     <div class="collapse navbar-collapse navbar-collapse1">
+                        <div class="nav pull-right">
+                           <a href="#about" class="page-scroll">About</a>
+                           <a href="#education" class="page-scroll">Education</a>
+                           <a href="#skills" class="page-scroll">Skills</a>
+                           <a href="#experience" class="page-scroll">Experience</a>
+                           <a href="#work" class="page-scroll">Work</a>
+                           <a href="#testimonial" class="page-scroll">Testimonial</a>
+                           <a href="#blog-post" class="page-scroll">Blog</a>
+                           <a href="#contact" class="page-scroll">Contact</a>
+                        </div>
+                     </div>
+                     <!--end navbar-collapse-->
+                     
+                  </div>
+                  <!--end row-->
+               </div>
+               <!--end container-->
+            </nav>
+            <!--end navbar-->
+            
+         </header>
+         <!--end header-->
+         
+         <!--intro-->
+         <div id="home" class="intro bg-paper">
+           
+            <!--intro-content-->
+            <div class="intro-content">
+              
+               <div class="container">
+                  <div class="row">
+                    
+                     <div class="col-md-12">
+                       
+                        <h1 class="intro-title">John Danilo</h1>
+                        <h3 class="intro-subtitle">Front end developer</h3>
+                        <a href="#about" class="link animated easing">About Me</a>
+                        
+                     </div>
+                     <!--end col-->
+                     
+                  </div>
+                  <!--end row-->
+               </div>
+               <!--end container-->
+               
+            </div>
+            <!--end intro-content-->
+            
+         </div>
+         <!--end intro-->
+         
+         <!--section about-->
+         <section id="about" class="section-padding border-bottom">
+           
+            <div class="container">
+               <div class="row">
+                 
+                  <div class="col-md-6">
+                    
+                     <h3 class="mb-20">About Me</h3>
+                     
+                    
+                     <p class="lead mb-35">
+                        Hello, I’m a UI/UX Designer &amp; Frontend Developer from Satkhira, Bangladesh. I hold a master degree of Web Design from the World University.             
+                     </p>
+                     
+                     <!--about-list-->
+                     <ul class="about-list">
+                       
+                        <li>
+                           <div class="left">Name:</div>
+                           <div class="right">Jonn Doe</div>
+                        </li>
+                        
+                        <li>
+                           <div class="left">Skype:</div>
+                           <div class="right">mySkypeId</div>
+                        </li>
+                        
+                        <li>
+                           <div class="left">Email:</div>
+                           <div class="right">someone@gmail.com</div>
+                        </li>
+                        
+                     </ul>
+                     <!--end about-list-->
+                    
+                     
+                  </div>
+                  <!--end col-->
+                  
+                  <div class="col-md-5 pull-right">
+                   
+                   <div class="row">
+                    
+                     <div class="col-xs-12">
+                       
+                        <h3 class="mb-20">My mission</h3>
+                        
+                        <p class="lead mb-35">
+                           Lorem ipsum dolor sit amet consectetur adipisicing elit do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis
+                        </p>
+                        
+                     </div>
+                     <!--end col-->   
+                     
+                   </div>
+                   <!-- end row-->
+                   
+                    <div class="row">
+                    
+                       <div class="col-xs-12 center-sm center-xs">
+                       
+                          <a href="#contact" class="btn btn-default easing">Hire me</a>
+                          <a href="" class="btn btn-default">Download CV</a>
+                        
+                       </div>
+                       <!--end col-->
+                     
+                    </div>
+                     <!--end row-->
+                     
+                  </div>
+                  <!--end col-->
+                  
+               </div>
+               <div class="row">
+                  <div class="col-md-12">
+                    
+                     <!--follow me-->
+                        <ul class="follow-me">
+                           <li><a href=""><i class="ion-social-twitter"></i></a></li>
+                           <li><a href=""><i class="ion-social-facebook"></i></a></li>
+                           <li><a href=""><i class="ion-social-googleplus"></i></a></li>
+                           <li><a href=""><i class="ion-social-dribbble-outline"></i></a></li>
+                           <li><a href=""><i class="ion-social-youtube"></i></a></li>
+                           <li><a href=""><i class="ion-social-github"></i></a></li>
+                           <li><a href=""><i class="ion-social-instagram"></i></a></li>
+                        </ul>
+                        <!--end follow me-->
+                    
+                    </div>
+               </div>
+               <!--end row-->
+               
+            </div>
+            <!--end container-->
+            
+         </section>
+         <!--end section about-->
+         
+         <!--section education-->
+         <section id="education" class="section-padding border-bottom">
+           
+            <div class="container">
+              
+               <!--title-->
+               <h2 class="title">Education</h2>
+               <!--end title-->
+               
+               <div class="row">
+                  <div class="col-md-12">
+                    
+                     <!--timeline-->
+                     <div class="timeline">
+                       
+                        <!--timeline-wrapper left-->
+                        <div class="timeline-wrapper left">
+                          
+                           <!--timeline-content-->
+                           <div class="timeline-content">
+                             
+                              <h3>Master of Visual Design</h3>
+                              <h5>University of design / 2012 – 2013</h5>
+                              
+                              <p>
+                                 Lorem ipsum dolor sit amet consectetur adipisicing elit do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate.
+                              </p>
+                              
+                           </div>
+                           <!--end timeline-content-->
+                           
+                        </div>
+                        <!--end timeline-wrapper right-->
+                        
+                        <!--timeline-wrapper right-->
+                        <div class="timeline-wrapper right">
+                           
+                           <!--timeline-content-->
+                           <div class="timeline-content">
+                             
+                              <h3>Master of Engineering</h3>
+                              <h5>Boston University / 2011 – 2013</h5>
+                              
+                              <p>
+                                 Lorem ipsum dolor sit amet consectetur adipisicing elit do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate.
+                              </p>
+                              
+                           </div>
+                           <!--end timeline-content-->
+                           
+                        </div>
+                        <!--end timeline-wrapper right-->
+                        
+                        <!--timeline-wrapper left-->
+                        <div class="timeline-wrapper left">
+                          
+                           <!--timeline-content-->
+                           <div class="timeline-content">
+                             
+                              <h3>Degree of Design</h3>
+                              <h5>World university / 2009 – 2011</h5>
+                              
+                              <p>
+                                 Lorem ipsum dolor sit amet consectetur adipisicing elit do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate.
+                              </p>
+                              
+                           </div>
+                           <!--end timeline-content-->
+                           
+                        </div>
+                        <!--end timeline-wrapper left-->
+                        
+                        <!--timeline-wrapper right-->
+                        <div class="timeline-wrapper right">
+                          
+                           <!--timeline-content-->
+                           <div class="timeline-content">
+                             
+                              <h3>Degree of Web Design</h3>
+                              <h5>Design university / 2007 – 2009</h5>
+                              
+                              <p>
+                                 Lorem ipsum dolor sit amet consectetur adipisicing elit do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate.
+                              </p>
+                              
+                           </div>
+                           <!--end timeline-content-->
+                           
+                        </div>
+                        <!--end timeline-wrapper right-->
+                        
+                     </div>
+                     <!--end timeline-->
+                     
+                  </div>
+                  <!--end col-->
+               </div>
+               <!--end row-->
+               
+            </div>
+            <!--end container-->
+            
+         </section>
+         <!--end section education-->
+         
+         <!--section skills-->
+         <section id="skills" class="section-padding border-bottom">
+           
+            <div class="container">
+              
+               <!--title-->
+               <h2 class="title">Skills</h2>
+               <!--end title-->
+               
+               <div class="row">
+                 
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    
+                     <!--skills-->
+                     <div class="skills">
+                       
+                        <!--skill-title-wrapper-->
+                        <div class="skill-title-wrapper">
+                          
+                           <div class="skill-icon"><i class="ion-social-buffer"></i></div>
+                           <h4 class="skill-title">Photoshop</h4>
+                           
+                        </div>
+                        <!--end skill-title-wrapper-->
+                        
+                        <!--skillbar-->
+                        <div class="skillbar" data-percent="75%">
+                          
+                           <h6 class="skillbar-percent">75%</h6>
+                           
+                           <div class="skillbar-bar">
+                              <div class="skillbar-child"></div>
+                           </div>
+                           
+                        </div>
+                        <!--end skillbar-->
+                        
+                        <!--skill-content-->
+                        <div class="skill-content">
+                           <p>Lorem ipsum dolor sit amet eli corrupti reiciendis consectetur adipisicing eli corrupti</p>
+                        </div>
+                        <!--end skill-content-->
+                        
+                     </div>
+                     <!--end skills-->
+                     
+                  </div>
+                  <!--end col-->
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    
+                     <!--skills-->
+                     <div class="skills">
+                       
+                        <!--skill-title-wrapper-->
+                        <div class="skill-title-wrapper">
+                          
+                           <div class="skill-icon"><i class="ion-android-camera"></i></div>
+                           <h4 class="skill-title">Photography</h4>
+                           
+                        </div>
+                        <!--end skill-title-wrapper-->
+                        
+                        <!--skillbar-->
+                        <div class="skillbar" data-percent="80%">
+                          
+                           <h6 class="skillbar-percent">80%</h6>
+                           
+                           <div class="skillbar-bar">
+                              <div class="skillbar-child"></div>
+                           </div>
+                           
+                        </div>
+                        <!--end skillbar-->
+                        
+                        <!--skill-content-->
+                        <div class="skill-content">
+                           <p>Lorem ipsum dolor sit amet eli corrupti reiciendis consectetur adipisicing eli corrupti</p>
+                        </div>
+                        <!--end skill-content-->
+                        
+                     </div>
+                     <!--end skills-->
+                     
+                  </div>
+                  <!--end col-->
+                  
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    
+                     <!--skills-->
+                     <div class="skills">
+                       
+                        <!--skill-title-wrapper-->
+                        <div class="skill-title-wrapper">
+                          
+                           <div class="skill-icon"><i class="ion-android-film"></i></div>
+                           <h4 class="skill-title">Videography</h4>
+                           
+                        </div>
+                        <!--end skill-title-wrapper-->
+                        
+                        <!--skillbar-->
+                        <div class="skillbar" data-percent="70%">
+                          
+                           <h6 class="skillbar-percent">70%</h6>
+                           
+                           <div class="skillbar-bar">
+                              <div class="skillbar-child"></div>
+                           </div>
+                           
+                        </div>
+                        <!--end skillbar-->
+                        
+                        <!--skill-content-->
+                        <div class="skill-content">
+                           <p>Lorem ipsum dolor sit amet eli corrupti reiciendis consectetur adipisicing eli corrupti</p>
+                        </div>
+                        <!--end skill-content-->
+                        
+                     </div>
+                     <!--end skills-->
+                     
+                  </div>
+                  <!--end col-->
+                  
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    
+                     <!--skills-->
+                     <div class="skills">
+                       
+                        <!--skill-title-wrapper-->
+                        <div class="skill-title-wrapper">
+                          
+                           <div class="skill-icon"><i class="ion-ios-grid-view"></i></div>
+                           <h4 class="skill-title">Illustrator</h4>
+                           
+                        </div>
+                        <!--end skill-title-wrapper-->
+                        
+                        <!--skillbar-->
+                        <div class="skillbar" data-percent="85%">
+                          
+                           <h6 class="skillbar-percent">85%</h6>
+                           
+                           <div class="skillbar-bar">
+                              <div class="skillbar-child"></div>
+                           </div>
+                           
+                        </div>
+                        <!--end skillbar-->
+                        
+                        <!--skill-content-->
+                        <div class="skill-content">
+                           <p>Lorem ipsum dolor sit amet eli corrupti reiciendis consectetur adipisicing eli corrupti</p>
+                        </div>
+                        <!--end skill-content-->
+                        
+                     </div>
+                     <!--end skills-->
+                     
+                  </div>
+                  <!--end col-->
+                  
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    
+                     <!--skills-->
+                     <div class="skills">
+                       
+                        <!--skill-title-wrapper-->
+                        <div class="skill-title-wrapper">
+                           <div class="skill-icon"><i class="ion-bag"></i></div>
+                           <h4 class="skill-title">Wordpress</h4>
+                        </div>
+                        <!--end skill-title-wrapper-->
+                        
+                        <!--skillbar-->
+                        <div class="skillbar" data-percent="80%">
+                          
+                           <h6 class="skillbar-percent">80%</h6>
+                           
+                           <div class="skillbar-bar">
+                              <div class="skillbar-child"></div>
+                           </div>
+                           
+                        </div>
+                        <!--end skillbar-->
+                        
+                        <!--skill-content-->
+                        <div class="skill-content">
+                           <p>Lorem ipsum dolor sit amet eli corrupti reiciendis consectetur adipisicing eli corrupti</p>
+                        </div>
+                        <!--end skill-content-->
+                        
+                     </div>
+                     <!--end skills-->
+                     
+                  </div>
+                  <!--end col-->
+                  
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    
+                     <!--skills-->
+                     <div class="skills">
+                       
+                        <!--skill-title-wrapper-->
+                        <div class="skill-title-wrapper">
+                          
+                           <div class="skill-icon"><i class="ion-leaf"></i></div>
+                           <h4 class="skill-title">Javascript</h4>
+                           
+                        </div>
+                        <!--end skill-title-wrapper-->
+                        
+                        <!--skillbar-->
+                        <div class="skillbar" data-percent="60%">
+                          
+                           <h6 class="skillbar-percent">60%</h6>
+                           
+                           <div class="skillbar-bar">
+                              <div class="skillbar-child"></div>
+                           </div>
+                           
+                        </div>
+                        <!--end skillbar-->
+                        
+                        <!--skill-content-->
+                        <div class="skill-content">
+                           <p>Lorem ipsum dolor sit amet eli corrupti reiciendis consectetur adipisicing eli corrupti</p>
+                        </div>
+                        <!--end skill-content-->
+                        
+                     </div>
+                     <!--end skills-->
+                     
+                  </div>
+                  <!--end col-->
+                  
+               </div>
+               <!--end row-->
+               
+            </div>
+            <!--end container-->
+            
+         </section>
+         <!--end section skills-->
+         
+         <!--section experience-->
+         <section id="experience" class="section-padding border-bottom">
+           
+            <div class="container">
+              
+               <!--title-->
+               <h2 class="title">Experience</h2>
+               <!--end title-->
+               
+               <div class="row">
+                  <div class="col-md-12">
+                    
+                     <!--timeline-->
+                     <div class="timeline">
+                       
+                        <!--timeline-wrapper left-->
+                        <div class="timeline-wrapper left">
+                          
+                           <!--timeline-content-->
+                           <div class="timeline-content">
+                             
+                              <h3>Creative Art Director</h3>
+                              <h5>Media Panara / 2015 - 2013</h5>
+                              
+                              <p>
+                                 Lorem ipsum dolor sit amet consectetur adipisicing elit do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate.
+                              </p>
+                              
+                           </div>
+                           <!--end timeline-content-->
+                           
+                        </div>
+                        <!--end timeline-wrapper left-->
+                        
+                        <!--timeline-wrapper right-->
+                        <div class="timeline-wrapper right">
+                          
+                           <!--timeline-content-->
+                           <div class="timeline-content">
+                             
+                              <h3>Project Manager</h3>
+                              <h5>Web Linksture  / 2013 - 2012</h5>
+                              
+                              <p>
+                                 Lorem ipsum dolor sit amet consectetur adipisicing elit do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate.
+                              </p>
+                              
+                           </div>
+                           <!--end timeline-content-->
+                           
+                        </div>
+                        <!--end timeline-wrapper right-->
+                        
+                        <!--timeline-wrapper left-->
+                        <div class="timeline-wrapper left">
+                          
+                           <!--timeline-content-->
+                           <div class="timeline-content">
+                             
+                              <h3>UX Designer</h3>
+                              <h5>Media Matrix / 2012 - 2011</h5>
+                              
+                              <p>
+                                 Lorem ipsum dolor sit amet consectetur adipisicing elit do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate.
+                              </p>
+                              
+                           </div>
+                           <!--end timeline-content-->
+                           
+                        </div>
+                        <!--end timeline-wrapper left-->
+                        
+                        <!--timeline-wrapper right-->
+                        <div class="timeline-wrapper right">
+                          
+                           <!--timeline-content-->
+                           <div class="timeline-content">
+                             
+                              <h3>Graphics Designer</h3>
+                              <h5>Metrika Agency / 2011 - 2010</h5>
+                              
+                              <p>
+                                 Lorem ipsum dolor sit amet consectetur adipisicing elit do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate.
+                              </p>
+                              
+                           </div>
+                           <!--end timeline-content-->
+                           
+                        </div>
+                        <!--end timeline-wrapper right-->
+                        
+                     </div>
+                     <!--end timeline-->
+                     
+                  </div>
+                  <!--end col-->
+               </div>
+               <!--end row-->
+               
+            </div>
+            <!--end container-->
+            
+         </section>
+         <!--end section experience-->
+         
+         <!--section work-->
+         <section id="work" class="section-padding">
+           
+            <div class="container">
+              
+               <!--title-->
+               <h2 class="title">Portfolio</h2>
+               <!--end title-->
+               
+               <div class="row">
+                  <div class="col-md-12">
+                    
+                     <!--portfolio-filter-->
+                     <ul class="portfolio-filter">
+                        <li><a href="#" class="filter active" data-filter="*">All</a></li>
+                        <li><a href="#" class="filter" data-filter=".branding">Branding</a></li>
+                        <li><a href="#" class="filter" data-filter=".illustration">Illustration</a></li>
+                        <li><a href="#" class="filter" data-filter=".web-design">Web Design</a></li>
+                        <li><a href="#" class="filter" data-filter=".print">Print</a></li>
+                     </ul>
+                     <!--end portfolio-filter-->
+                     
+                     <!--grid masonry-->
+                     <div class="grid masonry mfp-popup">
+                       
+                        <!--masonry-item-->
+                        <div class="masonry-item branding">
+                          
+                           <!--thumb-->
+                           <div class="thumb">
+                             
+                              <div class="overlay"></div>
+                              
+                              <img src="img/portfolio/01.jpg" alt="" />
+                              
+                              <!--meta-->
+                              <div class="meta">
+                                 <div class="inner">
+                                   
+                                    <div class="btns">
+                                       <a href="img/portfolio/large/01.jpg" data-effect="mfp-zoom-in"><i class="ion-search"></i></a>
+                                       <a href="img/portfolio/large/02.jpg" data-effect="mfp-zoom-in"><i class="ion-link"></i></a>
+                                    </div>
+                                    
+                                    <h4>Portfolio Title</h4>
+                                    
+                                 </div>
+                              </div>
+                              <!--end meta-->
+                              
+                           </div>
+                           <!--end thumb-->
+                           
+                        </div>
+                        <!--end masonry-item-->
+                        
+                        <!--masonry-item-->
+                        <div class="masonry-item illustration">
+                          
+                           <!--thumb-->
+                           <div class="thumb">
+                             
+                              <div class="overlay"></div>
+                              
+                              <img src="img/portfolio/02.jpg" alt="" />
+                              
+                              <!--meta-->
+                              <div class="meta">
+                                 <div class="inner">
+                                   
+                                    <div class="btns">
+                                       <a href="img/portfolio/large/02.jpg" data-effect="mfp-zoom-in"><i class="ion-search"></i></a>
+                                       <a href="img/portfolio/large/01.jpg" data-effect="mfp-zoom-in"><i class="ion-link"></i></a>
+                                    </div>
+                                    
+                                    <h4>Portfolio Title</h4>
+                                    
+                                 </div>
+                              </div>
+                              <!--end meta-->
+                              
+                           </div>
+                           <!--end thumb-->
+                           
+                        </div>
+                        <!--end masonry-item-->
+                        
+                        <!--masonry-item-->
+                        <div class="masonry-item branding web-design">
+                          
+                           <!--thumb-->
+                           <div class="thumb">
+                             
+                              <div class="overlay"></div>
+                              
+                              <img src="img/portfolio/03.jpg" alt="" />
+                              
+                              <!--meta-->
+                              <div class="meta">
+                                 <div class="inner">
+                                   
+                                    <div class="btns">
+                                       <a href="img/portfolio/large/03.jpg" data-effect="mfp-zoom-in"><i class="ion-search"></i></a>
+                                       <a href="img/portfolio/large/02.jpg" data-effect="mfp-zoom-in"><i class="ion-link"></i></a>
+                                    </div>
+                                    
+                                    <h4>Portfolio Title</h4>
+                                    
+                                 </div>
+                              </div>
+                              <!--end meta-->
+                              
+                           </div>
+                           <!--end thumb-->
+                           
+                        </div>
+                        <!--end masonry-item-->
+                        <!--masonry-item-->
+                        <div class="masonry-item illustration print">
+                          
+                           <!--thumb-->
+                           <div class="thumb">
+                             
+                              <div class="overlay"></div>
+                              
+                              <img src="img/portfolio/04.jpg" alt="" />
+                              
+                              <!--meta-->
+                              <div class="meta">
+                                 <div class="inner">
+                                   
+                                    <div class="btns">
+                                       <a href="img/portfolio/large/01.jpg" data-effect="mfp-zoom-in"><i class="ion-search"></i></a>
+                                       <a href="img/portfolio/large/02.jpg" data-effect="mfp-zoom-in"><i class="ion-link"></i></a>
+                                    </div>
+                                    
+                                    <h4>Portfolio Title</h4>
+                                    
+                                 </div>
+                              </div>
+                              <!--end meta-->
+                              
+                           </div>
+                           <!--end thumb-->
+                           
+                        </div>
+                        <!--end masonry-item-->
+                        
+                        <!--masonry-item-->
+                        <div class="masonry-item web-design">
+                          
+                           <!--thumb-->
+                           <div class="thumb">
+                             
+                              <div class="overlay"></div>
+                              
+                              <img src="img/portfolio/05.jpg" alt="" />
+                              
+                              <!--meta-->
+                              <div class="meta">
+                                 <div class="inner">
+                                   
+                                    <div class="btns">
+                                       <a href="img/portfolio/large/02.jpg" data-effect="mfp-zoom-in"><i class="ion-search"></i></a>
+                                       <a href="img/portfolio/large/01.jpg" data-effect="mfp-zoom-in"><i class="ion-link"></i></a>
+                                    </div>
+                                    
+                                    <h4>Portfolio Title</h4>
+                                    
+                                 </div>
+                              </div>
+                              <!--end meta-->
+                              
+                           </div>
+                           <!--end thumb-->
+                           
+                        </div>
+                        <!--end masonry-item-->
+                        
+                        <!--masonry-item-->
+                        <div class="masonry-item print">
+                          
+                           <!--thumb-->
+                           <div class="thumb">
+                             
+                              <div class="overlay"></div>
+                              
+                              <img src="img/portfolio/06.jpg" alt="" />
+                              
+                              <!--meta-->
+                              <div class="meta">
+                                 <div class="inner">
+                                   
+                                    <div class="btns">
+                                       <a href="img/portfolio/large/03.jpg" data-effect="mfp-zoom-in"><i class="ion-search"></i></a>
+                                       <a href="img/portfolio/large/02.jpg" data-effect="mfp-zoom-in"><i class="ion-link"></i></a>
+                                    </div>
+                                    
+                                    <h4>Portfolio Title</h4>
+                                    
+                                 </div>
+                              </div>
+                              <!--end meta-->
+                           </div>
+                           <!--end thumb-->
+                           
+                        </div>
+                        <!--end masonry-item-->
+                        
+                     </div>
+                     <!--end grid masonry-->
+                     
+                  </div>
+                  <!--end col-->
+               </div>
+               <!--end row-->
+               
+            </div>
+            <!--end container-->
+            
+         </section>
+         <!--end section work-->
+         
+         <!--section testimonial-->
+         <section id="testimonial" class="section-padding">
+           
+            <div class="container">
+              
+               <!--title-->
+               <h2 class="title">Testimonial</h2>
+               <!--end title-->
+               
+               <div class="row">
+                 
+                  <div class="col-md-8 center-col">
+                    
+                     <!--testimonial-carousel-->
+                     <div class="testimonial-carousel">
+                       
+                        <!--testimonial-item-->
+                        <div class="testimonial-item">
+                           <div class="testimonial">
+                             
+                              <!--testimonial-img-->
+                              <div class="testimonial-img">
+                                 <img src="img/testimonial/01.jpg" alt="" />
+                              </div>
+                              <!--end testimonial-img-->
+                              
+                              <!--testimonial-content-->
+                              <div class="testimonial-content">
+                                
+                                 <div class="ratings">
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                 </div>
+                                 
+                                 <div class="testimonial-author">Alexander Samokhin</div>
+                                 
+                                 <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text. Lorem Ipsum is simply dummy text.
+                                 </p>
+                                 
+                              </div>
+                              <!--end testimonial-content-->
+                              
+                           </div>
+                        </div>
+                        <!--end testimonial-item-->
+                        
+                        <!--testimonial-item-->
+                        <div class="testimonial-item">
+                           <div class="testimonial">
+                             
+                              <!--testimonial-img-->
+                              <div class="testimonial-img">
+                                 <img src="img/testimonial/02.jpg" alt="" />
+                              </div>
+                              <!--end testimonial-img-->
+                              
+                              <!--testimonial-content-->
+                              <div class="testimonial-content">
+                                
+                                 <div class="ratings">
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                 </div>
+                                 
+                                 <div class="testimonial-author">Amanda Doe</div>
+                                 
+                                 <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text. Lorem Ipsum is simply dummy text.
+                                 </p>
+                                 
+                              </div>
+                              <!--end testimonial-content-->
+                              
+                           </div>
+                        </div>
+                        <!--end testimonial-item-->
+                        
+                        <!--testimonial-item-->
+                        <div class="testimonial-item">
+                          
+                           <div class="testimonial">
+                               
+                              <!--testimonial-img-->
+                              <div class="testimonial-img">
+                                 <img src="img/testimonial/03.jpg" alt="" />
+                              </div>
+                              <!--end testimonial-img-->
+                              
+                              <!--testimonial-content-->
+                              <div class="testimonial-content">
+                                
+                                 <div class="ratings">
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                 </div>
+                                 
+                                 <div class="testimonial-author">Christopher Robins</div>
+                                 
+                                 <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text. Lorem Ipsum is simply dummy text.
+                                 </p>
+                                 
+                              </div>
+                              <!--end testimonial-content-->
+                              
+                           </div>
+                        </div>
+                        <!--end testimonial-item-->
+                        
+                     </div>
+                     <!--end testimonial-carousel-->
+                     
+                  </div>
+                  <!--end col-->
+                  
+               </div>
+               <!--end row-->
+               
+            </div>
+            <!--end container-->
+            
+         </section>
+         <!--end section testimonial-->
+         
+         <!--section blog-post-->
+         <section id="blog-post" class="section-padding border">
+           
+            <div class="container">
+              
+               <!--title-->
+               <h2 class="title">My Thoughts</h2>
+               <!--end title-->
+               
+               <div class="row">
+                  <div class="col-sm-4">
+                    
+                     <!--blog-post-->
+                     <div class="blog-post mb-sm-35">
+                       
+                        <a href="blog.html"><img src="img/blog/01.jpg" class="post-thumb" alt="" /></a>
+                        
+                        <!--post-details-->
+                        <div class="post-details">
+                          
+                           <a class="meta-cat">Photoshop</a>
+                           
+                           <h3 class="post-title">
+                              <a href="blog.html" class="link">
+                                  Lorem ipsum dolor are important because they celebrate life and possibility.
+                              </a>
+                           </h3>
+                           
+                           <p>
+                              Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum is is simply dummy text of the printing and typesetting industry...
+                           </p>
+                           
+                           <hr class="mtb-15" />
+                           
+                           <a href="" class="text-light text-xs">30 June 2016</a>
+                           <a href="" class="text-light text-xs">Posted By Admin</a>
+                           
+                        </div>
+                        <!--end post-details-->
+                        
+                     </div>
+                     <!--end blog-post-->
+                     
+                  </div>
+                  <!--end col-->
+                  <div class="col-sm-4">
+                    
+                     <!--blog-post-->
+                     <div class="blog-post mb-sm-35">
+                       
+                        <a href="blog.html"><img src="img/blog/02.jpg" class="post-thumb" alt="" /></a>
+                        
+                        <!--post-details-->
+                        <div class="post-details">
+                          
+                           <a class="meta-cat">Illustrator</a>
+                           
+                           <h3 class="post-title">
+                              <a href="blog.html" class="link">
+                                  Lorem ipsum dolor are important because they celebrate life and possibility.
+                              </a>
+                           </h3>
+                           
+                           <p>
+                              Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum is is simply dummy text of the printing and typesetting industry...
+                           </p>
+                           
+                           <hr class="mtb-15" />
+                           
+                           <a href="" class="text-light text-xs">30 June 2016</a>
+                           <a href="" class="text-light text-xs">Posted By Admin</a>
+                           
+                        </div>
+                        <!--end post-details-->
+                        
+                     </div>
+                     <!--end blog-post-->
+                     
+                  </div>
+                  <!--end col-->
+                  
+                  <div class="col-sm-4">
+                    
+                     <!--blog-post-->
+                     <div class="blog-post mb-sm-35">
+                       
+                        <a href="blog.html"><img src="img/blog/03.jpg" class="post-thumb" alt="" /></a>
+                        
+                        <!--post-details-->
+                        <div class="post-details">
+                          
+                           <a class="meta-cat">Videography</a>
+                           
+                           <h3 class="post-title">
+                              <a href="blog.html" class="link">
+                                  Lorem ipsum dolor are important because they celebrate life and possibility.
+                              </a>
+                           </h3>
+                           
+                           <p>
+                              Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum is is simply dummy text of the printing and typesetting industry...
+                           </p>
+                           
+                           <hr class="mtb-15" />
+                           
+                           <a href="" class="text-light text-xs">30 June 2016</a>
+                           <a href="" class="text-light text-xs">Posted By Admin</a>
+                           
+                        </div>
+                        <!--end post-details-->
+                        
+                     </div>
+                     <!--end blog-post-->
+                     
+                  </div>
+                  <!--end col-->
+                  
+               </div>
+               <!--end row-->
+               
+            </div>
+            <!--end container-->
+            
+         </section>
+         <!--end section blog-post-->
+         
+         <!--section contact-->
+         <section id="contact" class="section-padding">
+           
+            <div class="container">
+              
+               <!--title-->
+               <h2 class="title">Contact Me</h2>
+               <!--end title-->
+               
+               <div class="row">
+                 
+                  <div class="col-md-8 col-md-offset-2">
+                    
+                     <!--contact-form-->
+                     <form id="contact-form">
+                       
+                       <div class="row">
+                       
+                          <div class="col-md-6">
+                          
+                              <!--name-->
+                              <input type="text" id="name" class="form-control" placeholder="Name" />
+                              <!--end name-->
+                           
+                           </div>
+                           <!--end col-->
+                        
+                           <div class="col-md-6">
+                              <!--subject-->
+                              <input type="text" id="subject" class="form-control" placeholder="Why" />
+                              <!--end subject-->
+                           
+                           </div>
+                           <!--end col-->
+                        
+                           <div class="col-md-12">
+                          
+                              <!--email-->
+                              <input type="email" id="email" class="form-control" placeholder="Email" />
+                              <!--end email-->
+                           
+                           </div>
+                           <!--end col-->
+                        
+                           <div class="col-md-12">
+                          
+                              <!--messages-->
+                              <textarea id="messages" class="form-control" cols="30" rows="8" placeholder="Messages"></textarea>
+                              <!--end messages-->
+                           
+                           </div>
+                           <!--end col-->
+                        
+                           <div class="col-md-12">
+                          
+                              <!--success or error messages-->
+                              <h6 class="success-content"><i class="ion-android-checkbox-outline"></i>Your message has been sent successfully.</h6>
+                              <h6 class="error-content"><i class="ion-alert-circled"></i>Opps! Please fix the error.</h6>
+                              <!--end success or error messages-->
+                           
+                           </div>
+                           <!--end col-->
+                        
+                           <div class="col-md-12 text-center">
+                          
+                              <!--submit-->
+                              <button id="submit" class="btn btn-default">Send Your Message</button>
+                              <!--end submit-->
+                           
+                           </div>
+                           <!--end col-->
+                           
+                       </div>
+                       <!--end row-->
+                        
+                     </form>
+                     <!--end contact-form-->
+                     
+                  </div>
+                  <!--col-->
+                  
+               </div>
+               <!--end row-->
+               
+            </div>
+            <!--end container-->
+            
+         </section>
+         <!--end section contact-->
+         
+         <!--page-footer-->
+         <footer class="page-footer border-top">
+            <div class="container">
+               <div class="row">
+                 
+                  <div class="col-md-6">
+                     <a href="#home" class="easing">
+                       
+                        <!--footer-brand-->
+                        <h3 class="footer-brand mb-sm-30">Ario<span>X</span></h3>
+                        <!--end footer-brand-->
+                        
+                     </a>
+                  </div>
+                  <!--end col-->
+                  
+                  <div class="col-md-6">
+                    
+                     <!--footer-social-->
+                     <ul class="footer-social mb-sm-30">
+                        <li><a href=""><i class="ion-social-facebook"></i></a></li>
+                        <li><a href=""><i class="ion-social-twitter"></i></a></li>
+                        <li><a href=""><i class="ion-social-googleplus"></i></a></li>
+                        <li><a href=""><i class="ion-social-dribbble-outline"></i></a></li>
+                        <li><a href=""><i class="ion-social-youtube"></i></a></li>
+                     </ul>
+                     <!--end footer-social-->
+                     
+                  </div>
+                  <!--end col-->
+                  
+               </div>
+               <!--row-->
+               <hr class="mtb-30" />
+            </div>
+            <!--end container-->
+            
+            <div class="container">
+               <div class="row">
+                 
+                  <div class="col-md-12">
+                    
+                     <!--copyright text-->
+                     <div class="text-lg text-center">
+                        &copy; <span class="text-sm">2016 edevsbd. All right reserved</span>
+                     </div>
+                     <!--end copyright text-->
+                     
+                  </div>
+                  <!--end col-->
+                  
+               </div>
+               <!--end row-->
+            </div>
+            <!--end container-->
+            
+         </footer>
+         <!--end page-footer-->
+         
+      </div>
+      <!--end wrapper-->
+      
+      <!--jQuery-->
+      <script src="js/jquery-2.2.4.js"></script>
+      
+      <!-- bootstrap -->
+      <script src="js/bootstrap.js"></script>
+      
+      <!-- include individual files as needed -->
+      
+      <!-- easing -->
+      <script src="js/jquery.easing.js"></script>
+      
+      <!-- isotope -->
+      <script src="js/isotope.pkgd.min.js"></script>
+      <script src="js/imagesloaded.pkgd.min.js"></script>
+      
+      <!-- appear -->
+      <script src="js/jquery.appear.js"></script>
+      
+      <!-- owl.carousel -->
+      <script src="js/owl.carousel.js"></script>
+      
+      <!-- contact form -->
+      <script src="js/jquery.validate.js"></script>
+      <script src="js/contact.js"></script>
+      
+      <!-- magnific-popup -->
+      <script src="js/jquery.magnific-popup.js"></script>
+      
+      <!-- theme script -->
+      <script src="js/script.js"></script>
+      
+   </body>
+   <!--body end-->
+   
 </html>
