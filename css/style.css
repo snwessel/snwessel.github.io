@@ -628,7 +628,7 @@ header .navbar .navbar-header {
 
 .intro {
 	height: 85vh;
-	background-image: url(../img/hero/hero.png);
+	background-image: url(../img/primary.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -643,12 +643,14 @@ header .navbar .navbar-header {
 	font-size: 40px;
 	letter-spacing: 1px;
 	margin-bottom: 10px;
+    color:#dddddd;
 }
 
 .intro-subtitle {
 	font-size: 21px;
 	margin-bottom: 10px;
     text-transform: capitalize;
+    color:#cccccc;
 }
 
 .about-list {
@@ -1564,7 +1566,7 @@ label#email-error:before {
     }
     
     .intro-content {
-        text-align: center;
+        text-align: left;
     }
     
     .about-list {
@@ -1585,7 +1587,7 @@ label#email-error:before {
      }      
     
 	.intro-content {
-		text-align: center;
+		text-align: left;
 	}
     
     
