@@ -644,11 +644,13 @@ header .navbar .navbar-header {
 	letter-spacing: 1px;
 	margin-bottom: 10px;
     color:#dddddd;
+    text-shadow: 2px 2px #000000;
 }
 
 .intro-subtitle {
 	font-size: 21px;
 	margin-bottom: 10px;
+    text-shadow: 2px 2px #000000;
     text-transform: capitalize;
     color:#cccccc;
 }
