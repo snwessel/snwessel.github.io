@@ -1306,7 +1306,7 @@ label#email-error:before {
 
 .blog-thumb {
 	position: relative;
-    background-image: url(../img/blog-single/thumb-bg.jpg);
+    background-image: url(../img/blog/data.jpeg);
 	height: 65vh;
 	background-position: center center;
 	background-repeat: no-repeat;
