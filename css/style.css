@@ -42,7 +42,7 @@
 }
 
 body {
-    font-family: 'Roboto Mono', monospace;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	color: #626262;
 	font-weight: 500;
 	-webkit-font-smoothing: antialiased;
@@ -96,7 +96,7 @@ h6 {
 
 a {
     line-height: inherit;
-	color: #00ACC1;
+	color: #108BC1;
 	text-decoration: none;
 	-webkit-transition: all 0.3s ease-in;
 	-moz-transition: all 0.3s ease-in;
