@@ -508,6 +508,11 @@ p {
 	height: auto;
 }
 
+.img-responsive{
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
 .text-md {
 	font-size: 14px;
 	line-height: 24px;
