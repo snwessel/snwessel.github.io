@@ -1,0 +1,5 @@
+.image-container {
+    background-image: url("../images/BackgroundMe.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+}
