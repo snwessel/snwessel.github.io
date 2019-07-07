@@ -1,5 +1,7 @@
-.image-container {
-    background-image: url("../images/BackgroundMe.jpg");
-    background-repeat: no-repeat;
-    width: 100%;
+p {
+    margin-bottom: 0.5rem;
+}
+
+h5 {
+    margin-bottom: 5px;
 }
