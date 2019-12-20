@@ -5,3 +5,8 @@ p {
 h5 {
     margin-bottom: 5px;
 }
+
+a, a:hover {
+    color: black;
+    
+}
